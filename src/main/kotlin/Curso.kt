@@ -13,6 +13,8 @@ class Curso(
             throw IllegalArgumentException("Nome do curso não pode ser vazio")
         if (code.isBlank())
             throw IllegalArgumentException("Código não pode ser vazio")
+        if (!code.all { it.isLowerCase() && it.isLetter() || it == '-' })
+            throw IllegalArgumentException("Código deve ser composto somente por letras minusculas e -")
         if (hours !in 1..20)
             throw IllegalArgumentException("Horas deve ser entre 1 e 20")
         if (instructorName.isBlank())

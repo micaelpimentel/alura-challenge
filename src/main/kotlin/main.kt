@@ -6,7 +6,7 @@ fun main() {
     try {
         curso = Curso(
             name = "Introdução ao Kotlin",
-            code = "abcdef",
+            code = "abc-def",
             hours = 10,
             isPrivate = false,
             instructorName = "Micael Pimentel"
