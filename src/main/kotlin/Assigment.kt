@@ -3,8 +3,8 @@ class Assigment(
     val code: String,
     val ordinal: Int,
     val isActive: Boolean = false,
-    val type: Int,
-    val section: Section
+    val type: AssigmentType,
+    val section: Section? = null
 ) {
     init {
         if (name.isBlank())

@@ -1,0 +1,1 @@
+class AssigmentExplanation(val description: String) : AssigmentType

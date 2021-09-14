@@ -16,4 +16,9 @@ fun main() {
         println(e)
     }
 
+    val atividade1 = AssigmentExplanation("Descriçao da atividade 1")
+    val atividade2 = AssigmentVideo("youtube.com", 12,"Transcrição do video")
+    val atividade3 = AssigmentQuestion("Descrição da atividade 3", 3)
+
+    val atividade = Assigment("Atividade", "asd-fgf",1,false, atividade1)
 }
