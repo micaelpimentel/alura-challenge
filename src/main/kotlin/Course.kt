@@ -1,4 +1,4 @@
-class Curso(
+class Course(
     var name: String,
     val code: String,
     val hours: Int,
