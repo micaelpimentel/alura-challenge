@@ -9,4 +9,8 @@ class Alternative(
         if (explanation.isBlank())
             throw IllegalArgumentException("Explicação não pode ser vazio")
     }
+
+    override fun toString(): String {
+        return "Alternative(explanation='$explanation', ordinal=$ordinal, isCorrectAnswer=$isCorrectAnswer, justification='$justification', question=${question.description})"
+    }
 }
