@@ -11,7 +11,7 @@ class Section(
             throw IllegalArgumentException("Nome do curso não pode ser vazio")
         if (code.isBlank())
             throw IllegalArgumentException("Código não pode ser vazio")
-        if (!code.all { it.isLowerCase() && it.isLetter() || it == '-' })
-            throw IllegalArgumentException("Código deve ser composto somente por letras minusculas e -")
+        if (!code.matches("^(?:[a-z]-?)+[^-]\$".toRegex()))
+            throw IllegalArgumentException("Código deve ser composto por letras minusculas separadas por -")
     }
 }
