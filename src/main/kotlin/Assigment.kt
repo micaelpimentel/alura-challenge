@@ -8,7 +8,7 @@ class Assigment(
 ) {
     init {
         if (name.isBlank())
-            throw IllegalArgumentException("Nome do curso não pode ser vazio")
+            throw IllegalArgumentException("Nome não pode ser vazio")
         if (code.isBlank())
             throw IllegalArgumentException("Código não pode ser vazio")
         if (!code.matches("^(?:[a-z]-?)+[^-]\$".toRegex()))
