@@ -1,17 +1,23 @@
 fun main() {
     println("Bem vindo ao curso Gigabyte")
 
-    val curso: Course
-
     try {
-        curso = Course(
+        Course(
             name = "Introdução ao Kotlin - básico",
             code = "abc-def",
             hours = 10,
             isPrivate = false,
             instructorName = "Micael Pimentel"
-        )
-        println(curso.toString())
+        ).toString().also(::println)
+
+        Course(
+            name = "Polimorfismo e Heranças em Kotlin",
+            code = "efd-qpweop",
+            hours = 8,
+            isPrivate = false,
+            instructorName = "Micael Pimentel"
+        ).toString().also(::println)
+
     } catch (e: Exception) {
         println(e)
     }
