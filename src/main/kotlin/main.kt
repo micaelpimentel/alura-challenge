@@ -26,5 +26,27 @@ fun main() {
     val atividade2 = AssigmentVideo("youtube.com", 12,"Transcrição do video")
     val atividade3 = AssigmentQuestion("Descrição da atividade 3", 3)
 
-    val atividade = Assigment("Atividade", "asd-fgf",1,false, atividade1)
+    val atividade = Assigment("Atividade", "asd-fgf",1,false, atividade3)
+
+    val alternativa1 = Alternative(
+        explanation = "Texto da explicação 1",
+        ordinal = 1,
+        isCorrectAnswer = false,
+        justification = "Tá errado, mano",
+        question = atividade3
+    ).toString().also(::println)
+    val alternativa2 = Alternative(
+        explanation = "Texto da explicação 2",
+        ordinal = 2,
+        isCorrectAnswer = true,
+        justification = "Tá certo!",
+        question = atividade3
+    ).toString().also(::println)
+    val alternativa3 = Alternative(
+        explanation = "Texto da explicação 3",
+        ordinal = 3,
+        isCorrectAnswer = false,
+        justification = "Errroouuu!!",
+        question = atividade3
+    ).toString().also(::println)
 }
