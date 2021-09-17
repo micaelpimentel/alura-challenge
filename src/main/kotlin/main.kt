@@ -49,4 +49,15 @@ fun main() {
         justification = "Errroouuu!!",
         question = atividade3
     ).toString().also(::println)
+
+    val category = Category(
+        name = "Nome da Categoria",
+        code = "s-ab",
+        description = "Descrição sucinta da categoria",
+        studyGuideText = "Guia de estudos",
+        isActive = true,
+        ordinal = 1,
+        iconPath = "caminho/do/arquivo.png",
+        colorCode = "#0A81EF"
+    ).also(::println)
 }
