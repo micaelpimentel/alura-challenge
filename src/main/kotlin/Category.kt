@@ -15,7 +15,7 @@ class Category(
             throw IllegalArgumentException("Código não pode ser vazio")
         if (!code.matches("^(?:[a-z]-?)+[^-]\$".toRegex()))
             throw IllegalArgumentException("Código deve ser composto por letras minusculas separadas por -")
-        if (!colorCode.matches("[a-fA-F0-9]{6}".toRegex()))
+        if (!colorCode.matches("^#[a-fA-F0-9]{6}\$".toRegex()))
             throw IllegalArgumentException("Cor deve ser um hexadecimal com seis dígitos")
     }
 
